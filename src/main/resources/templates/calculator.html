@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Calculator</title>
+    <link rel="stylesheet" th:href="@{/calculator.css}" />
+</head>
+
+<body>
+    <header>
+        <div class="title">Calculadora Simple</div>
+</header>
+    <div class="calculator">
+        <form th:action="@{/calculator}" th:object="${operationModel}" method="POST">
+            <div>
+                <h1>Simple</h1>
+                <input type="text" th:field="*{a}" placeholder="Número A" />
+                <input type="text" th:field="*{b}" placeholder="Número B" />
+                <div class="buttons">
+                    <button type="submit" name="add">+</button>
+                    <button type="submit" name="subtract">-</button>
+                    <button type="submit" name="multiply">×</button>
+                    <button type="submit" name="divide">÷</button>
+                    <button type="submit" name="clearSimple">C</button>
+                </div>
+            </div>
+
+            <div>
+                <h1>Avanzado</h1>
+                <input type="text" th:field="*{c}" placeholder="Entrada" />
+                <div class="buttons">
+                    <button type="submit" name="fibonacci">fib</button>
+                    <button type="submit" name="factorial">!</button>
+                    <button type="submit" name="sqrt">√</button>
+                    <button type="submit" name="power">^</button>
+                    <button type="submit" name="clearAdvanced">C</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <p th:text="'Resultado: ' + (${result} != null ? ${result} : 0)">Resultado: 0</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
