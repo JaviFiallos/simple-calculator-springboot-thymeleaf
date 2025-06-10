@@ -1,18 +1,20 @@
 # calculator
-> Calculator in Java Spring with Spring Boot and Thymeleaf 
+> Calculator in Java Spring with Spring Boot and Thymeleaf
 
 ## General info
-This simple application allow to execute basic mathematical operations. It was created to practise Thymeleaf and Spring Boot.
+This simple application allows you to execute basic mathematical operations. It was created to practice Thymeleaf and Spring Boot.
 
 ## Technologies
+* Java 17
 * Maven
-* Spring Boot 1.5.9
-* Thymeleaf 3.0.2
+* Spring Boot 3.2.5
+* Thymeleaf
 
 ## Setup
-1. Clone github repository <br />
-2. Download maven dependencies <br />
-3. Hit run button <br />
+1. Clone this GitHub repository  
+2. Run `mvn clean install` to download dependencies  
+3. Start the application using your IDE or by running:  
+
 
 ## Features
 * Addition
@@ -20,6 +22,17 @@ This simple application allow to execute basic mathematical operations. It was c
 * Multiplication
 * Division
 * Square
-* Element 
-* Number of Fibonacci
+* Element
+* Fibonacci number
 
+## Project structure
+This project uses the following Spring Boot dependencies:
+- `spring-boot-starter-web` for building RESTful web applications
+- `spring-boot-starter-thymeleaf` for template rendering
+- `spring-boot-devtools` for hot reloading in development
+
+## Build
+The project is built with:
+```xml
+<java.version>17</java.version>
+<spring-boot.version>3.2.5</spring-boot.version>
