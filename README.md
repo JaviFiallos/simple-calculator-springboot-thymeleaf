@@ -31,6 +31,12 @@ This project uses the following Spring Boot dependencies:
 - `spring-boot-starter-thymeleaf` for template rendering
 - `spring-boot-devtools` for hot reloading in development
 
+## Documentación
+
+Este proyecto incluye documentación JavaDoc completa. Para generar la documentación:
+```bash
+mvn javadoc:javadoc
+
 ## Build
 The project is built with:
 ```xml
